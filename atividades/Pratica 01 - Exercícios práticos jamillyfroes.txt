@@ -1,0 +1,102 @@
+Pratica 01 - Exercícios práticos em Sala
+
+1-
+#include<stdio.h>
+#include <locale.h>
+int main() {
+		setlocale(LC_ALL, "Portuguese");
+		
+	float salario, valorAumento, novosal;
+	
+	printf("\nOlá! Este programa recebe o salário de um funcionário, calcula o aumento e mostra: o salário atual, o valor do aumento e o novo salário.");
+	printf("\nDigite o salário do funcionário: ");
+	scanf("%f%*c", &salario);
+	valorAumento= salario * 0.25;
+	novosal= salario + valorAumento;
+	
+	printf("\nO salário atual é:  %0.2f",salario);
+	printf("\nO valor do aumento é:  %0.2f",valorAumento);
+	printf("\nO novo salário é: %0.2f ",novosal);
+	
+	getchar();
+	return 0;
+}
+
+2-
+
+#include<stdio.h>
+#include <locale.h>
+int main() {
+		setlocale(LC_ALL, "Portuguese");
+		
+	float salariobase, valorGrat, valorImposto, novosal;
+	
+	printf("\nOlá! Este programa recebe o salário base de um funcionário, calcula e mostra: o valor da gratificação, valor do imposto e o salário a receber.\n");
+	printf("\nDigite o salário base do funcionário: ");
+	scanf("%f%*c", &salariobase);
+	
+	valorGrat= salariobase * 0.05;
+	valorImposto= salariobase * 0.07;
+	novosal= salariobase + valorGrat - valorImposto;
+	
+	printf("\nO valor da gratificação é:  %0.2f",valorGrat);
+	printf("\nO valor do imposto é:  %0.2f",valorImposto);
+	printf("\nO salário a receber é: %0.2f ",novosal);
+	
+	getchar();
+	return 0;
+}
+
+3-
+
+#include<stdio.h>
+#include <locale.h>
+int main() {
+		setlocale(LC_ALL, "Portuguese");
+		
+	float deposito, juros, rendimento, valorTotal;
+	
+	printf("\nOlá! Este programa recebe o valor de um depósito e o valor da taxa de juros, calcula e mostra: o valor do rendimento e o valor total depois do rendimento.\n");
+	
+	printf("\nDigite o valor do depósito: ");
+	scanf("%f%*c", &deposito);
+	
+	printf("\nDigite o valor da taxa de juros (sem o %): ");
+	scanf("%f%*c", &juros);
+	
+	rendimento= deposito * juros/100;
+	valorTotal= deposito + rendimento;
+	
+	printf("\nO valor do rendimento é:  %0.2f",rendimento);
+	printf("\nO valor total é:  %0.2f",valorTotal);
+	
+	getchar();
+	return 0;
+}
+
+4-
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Portuguese");
+
+    float pes, polegadas, jardas, milhas;
+
+    printf("\nOlá! Este programa recebe uma medida em pes, faz as conversões e mostra os resultados em: polegadas, jardas e milhas.\n");
+
+    printf("\nDigite a medida em pes: ");
+    scanf("%f%*c", &pes);
+
+    polegadas = pes * 12;
+    jardas = pes / 3;
+    milhas = pes / 5280; 
+
+    printf("\nMedida em polegadas: %.2f", polegadas);
+    printf("\nMedida em jardas: %.2f", jardas);
+    printf("\nMedida em milhas: %.6f\n", milhas); 
+
+	getchar();
+    return 0;
+}
